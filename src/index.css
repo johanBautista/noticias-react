@@ -13,6 +13,14 @@ code {
 }
 
 body{
-  background-color: #282c34;
+  background-color: #171a1f;
 
+}
+
+.header{
+  background: #000428;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);  
+  background: linear-gradient(to right, #004e92, #000428); 
+  margin: 10px;
+  padding: 10px;
 }
