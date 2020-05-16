@@ -21,7 +21,7 @@ const Boton = styled.input`
   }
 `;
 
-const Formulario = () => {
+const Formulario = ({guardarCategoria}) => {
   const Opciones = [
     { value: 'genera', label: 'General' },
     { value: 'bussiness', label: 'Negocios' },
@@ -31,13 +31,12 @@ const Formulario = () => {
     { value: 'science', label: 'Ciencia' },
     { value: 'entertainment', label: 'Entretenimiento' },
   ];
-  console.log(Opciones);
 
   const [categoria, SelectNoticias] = useSelect('general', Opciones);
 
   const buscarNoticias = (e) => {
     e.preventDefault();
-    console.log('hola');
+    guardarCategoria(categoria);
   };
 
   return (

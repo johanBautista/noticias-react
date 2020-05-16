@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState, Fragment } from 'react';
 import Header from './components/Header';
 import Formulario from './components/Formulario';
 
 function App() {
+  const [categoria, guardarCategoria] = useState('');
+  console.log(categoria);
+
   return (
-    <div className="">
+    <Fragment>
       <Header titulo="Buscador de Noticias" />
       <div className="container">
-        <Formulario />
+        <Formulario guardarCategoria={guardarCategoria} />
       </div>
-    </div>
+    </Fragment>
   );
 }
 
