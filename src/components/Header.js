@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 const Titulo = styled.h1`
   font-family: 'Raleway', sans-serif;
@@ -19,4 +20,7 @@ const Header = ({ titulo }) => {
   );
 };
 
+Header.protoTypes = {
+  titulo: PropTypes.string.isRequired,
+};
 export default Header;

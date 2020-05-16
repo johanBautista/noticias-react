@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import useSelect from '../hooks/useSelect';
+import PropTypes from 'prop-types';
 
 const Boton = styled.input`
   /* margin-top: 10px; */
@@ -21,7 +22,7 @@ const Boton = styled.input`
   }
 `;
 
-const Formulario = ({guardarCategoria}) => {
+const Formulario = ({ guardarCategoria }) => {
   const Opciones = [
     { value: 'genera', label: 'General' },
     { value: 'bussiness', label: 'Negocios' },
@@ -51,4 +52,7 @@ const Formulario = ({guardarCategoria}) => {
   );
 };
 
+Formulario.protoTypes = {
+  guardarCategoria: PropTypes.func.isRequired,
+};
 export default Formulario;
